@@ -1,0 +1,11 @@
+.example-container {
+    min-height: 100vh;
+}
+.user-avatar {
+    max-width: 120px;
+    margin: auto;
+    display: block;
+}
+.example-sidenav {
+    width:250px;
+}

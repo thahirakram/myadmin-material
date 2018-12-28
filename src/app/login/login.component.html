@@ -1,5 +1,56 @@
-<div class="login" fxLayout="row" fxLayoutAlign="center center">
-    <mat-form-field>
-        <input matInput placeholder="Input">
-      </mat-form-field>
+<div fxLayout="row" fxLayoutAlign="center center" [ngStyle]="{'margin-top': '10%'}">
+    <section fxLayout="column" fxFlex="100%" fxFlex.gt-xs="50%" fxFlex.gt-sm="25%">
+        <form name="LoginForm" #loginForm="ngForm" fxLayout="column" (ngSubmit)="handleSubmit(loginForm)" [ngStyle.xs]="{'margin': '3%'}"   >
+            <mat-form-field>
+                <input matInput email placeholder="Email" type="email" name="email" ngModel required>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="password" type="password" name="password" ngModel required>
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
+            </div>
+        </form>
+    </section>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

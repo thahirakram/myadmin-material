@@ -1,20 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-nav-top (click)="drawer.toggle()"></app-nav-top>
 
-<mat-drawer-container class="example-container" autosize >
+<mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
-    <p>sidenav</p>
     <div>
-        <a routerLink="/account/profile">
+      <a routerLink="/account/profile">
         <img class="user-avatar" src="/assets/user-avatar.svg">
-        </a>
-      </div>
-   
+      </a>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/login">Login</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/signup">Signup</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item>Forgot</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item>Delete</a>
+    </mat-nav-list>
   </mat-drawer>
 
-  <app-login></app-login>
+  <router-outlet></router-outlet>
 
 
 </mat-drawer-container>
-
-<router-outlet></router-outlet>

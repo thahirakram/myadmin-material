@@ -5,6 +5,7 @@
     max-width: 120px;
     margin: auto;
     display: block;
+    padding-top: 20px;
 }
 .example-sidenav {
     width:250px;
